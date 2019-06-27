@@ -16,6 +16,10 @@ phases:
   pre_build:
     commands:
       - echo "This is a pre build"
+      - cd ..
+      - echo "Current directory is `pwd`"
+      - mkdir data
+
 
   build:
     commands:
