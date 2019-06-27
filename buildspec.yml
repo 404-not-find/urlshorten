@@ -6,6 +6,8 @@ env:
 
 phases:
   install:
+    runtime-versions:
+      java: openjdk8
     run-as: root
     commands:
       - echo "Entered the install phase..."
