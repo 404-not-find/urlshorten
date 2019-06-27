@@ -17,8 +17,10 @@ phases:
     commands:
       - echo "This is a pre build"
       - cd ..
-      - echo "Current directory is `pwd`"
+      - echo "Before cd ..,Current directory is `pwd`,CODEBUILD_SRC_DIR is `$CODEBUILD_SRC_DIR`"
       - mkdir data
+      - cd -
+      - echo "After cd - ,Current directory is `pwd`,CODEBUILD_SRC_DIR is `$CODEBUILD_SRC_DIR`"
 
 
   build:
