@@ -29,5 +29,5 @@ phases:
       - echo "Build must be completed"
   artifacts:
     files:
-      - 'build/libs/*'
+      - build/libs/*.jar
     discard-paths: yes
