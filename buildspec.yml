@@ -27,7 +27,7 @@ phases:
   post_build:
     commands:
       - echo "Build must be completed"
-  artifacts:
-    files:
-      - build/libs/*.jar
-    discard-paths: yes
+artifacts:
+  files:
+    - build/libs/*.jar
+  discard-paths: yes
