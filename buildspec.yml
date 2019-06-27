@@ -1,0 +1,33 @@
+version: 0.2
+
+env:
+  variables:
+    JAVA_HOME: "/usr/lib/jvm/jre"
+
+phases:
+  install:
+    run-as: root
+    commands:
+      - echo "Entered the install phase..."
+      - wget https://services.gradle.org/distributions/gradle-5.4.1-all.zip
+      - unzip -d /opt/gradle gradle-5.4.1-all.zip
+  pre_build:
+    commands:
+      - echo "This is a pre build"
+
+  build:
+    commands:
+      - echo "Starting build `date`"
+      - echo "Current directory is `pwd`"
+      - whereis gradle
+      - which gradle
+      - /opt/gradle/gradle-5.4.1/bin/gradle -version
+      - /opt/gradle/gradle-5.4.1/bin/gradle clean
+      - /opt/gradle/gradle-5.4.1/bin/gradle build
+  post_build:
+    commands:
+      - echo "Build must be completed"
+  artifacts:
+    files:
+      - 'build/libs/*'
+    discard-paths: yes
