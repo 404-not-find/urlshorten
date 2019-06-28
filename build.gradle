@@ -5,7 +5,7 @@ plugins {
 }
 
 apply plugin: 'io.spring.dependency-management'
-
+apply plugin: 'war'
 group = 'aws.urlshortener'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
@@ -21,5 +21,10 @@ dependencies {
 	implementation("io.springfox:springfox-swagger-ui:2.9.2")
 	implementation("com.spring4all:swagger-spring-boot-starter:1.9.0.RELEASE")
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+war {
+	enabled = true
 }

@@ -14,13 +14,12 @@ phases:
       - wget https://services.gradle.org/distributions/gradle-5.4.1-all.zip
       - unzip -d /opt/gradle gradle-5.4.1-all.zip
   pre_build:
+    run-as: root
     commands:
       - echo "This is a pre build"
-      - cd ..
-      - echo "Before cd ..,Current directory is `pwd`,CODEBUILD_SRC_DIR is `$CODEBUILD_SRC_DIR`"
+      - echo "Current directory is `pwd`,CODEBUILD_SRC_DIR is `$CODEBUILD_SRC_DIR`"
       - mkdir data
-      - cd -
-      - echo "After cd - ,Current directory is `pwd`,CODEBUILD_SRC_DIR is `$CODEBUILD_SRC_DIR`"
+      - ls -alth
 
 
   build:

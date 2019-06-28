@@ -50,6 +50,12 @@ public class ResumeLog {
   }
 
   private static String generateFilename(final String resumeFolder) {
-    return resumeFolder + String.valueOf(Instant.now().toEpochMilli());
+    File dir = new File(resumeFolder);
+    if (!dir.exists()) {
+      boolean mk = dir.mkdirs();
+      LOGGER.info("create {} {}",resumeFolder,mk);
+    }
+    LOGGER.info("current {} is {}",resumeFolder,dir.exists());
+    return resumeFolder + File.separatorChar + String.valueOf(Instant.now().toEpochMilli());
   }
 }

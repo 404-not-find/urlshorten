@@ -3,6 +3,7 @@
 .gradle
 build
 out
+data
 /target/
 /bin/
 /.classpath
