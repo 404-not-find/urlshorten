@@ -1,9 +1,5 @@
 version: 0.2
 
-env:
-  variables:
-    JAVA_HOME: "/usr/lib/jvm/jre"
-
 phases:
   install:
     runtime-versions:
@@ -28,7 +24,7 @@ phases:
       - echo "Current directory is `pwd`"
       - whereis gradle
       - which gradle
-      - /opt/gradle/gradle-5.4.1/bin/gradle -version
+      - /opt/gradle/gradle-5.4.1/bin/gradle -v
       - /opt/gradle/gradle-5.4.1/bin/gradle clean
       - /opt/gradle/gradle-5.4.1/bin/gradle build
   post_build:
