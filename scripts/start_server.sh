@@ -1,6 +1,4 @@
 #!/bin/bash
-ls -alth
-echo `pwd`
 jarname='url-shortener-0.0.1-SNAPSHOT.jar'
 pid=`ps aux |grep $jarname |grep -v grep |awk '{print $2}'`
 echo $pid
