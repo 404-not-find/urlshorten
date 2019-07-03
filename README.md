@@ -11,7 +11,7 @@ url shorten deployed in aws
 
 修改代码后可以一键发布到线上,刷新页面直接看到最新效果。
 
-.Pipeline的数据流图
+Pipeline的数据流图
 
  ![aws codepipeline](https://github.com/sunwayjiao/urlshorten/blob/master/Pipeline.png)
 
