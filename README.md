@@ -29,11 +29,13 @@ http://ec2-18-205-158-123.compute-1.amazonaws.com/swagger/swagger-ui.html
 http://ec2-18-205-158-123.compute-1.amazonaws.com/actuator/loggers/
 
 动态修改Logger Level命令
+
 curl -X POST http://ec2-18-205-158-123.compute-1.amazonaws.com/actuator/loggers/aws.urlshortener \
 -H "Content-Type: application/vnd.spring-boot.actuator.v2+json;charset=UTF-8" \
 --data '{"configuredLevel":"DEBUG"}'
 
 4)AWS CodePipeline
+
 https://console.aws.amazon.com/codesuite/codepipeline/pipelines?region=us-east-1,选择第一个 shorturl_aws_myFirstPipeline
 
 
