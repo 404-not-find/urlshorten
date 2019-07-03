@@ -37,6 +37,7 @@ curl -X POST http://ec2-18-205-158-123.compute-1.amazonaws.com/actuator/loggers/
 
 ### 4)AWS CodePipeline
 
-https://console.aws.amazon.com/codesuite/codepipeline/pipelines?region=us-east-1,选择第一个 shorturl_aws_myFirstPipeline
+https://console.aws.amazon.com/codesuite/codepipeline/pipelines?region=us-east-1,
+选择第一个 shorturl_aws_myFirstPipeline
 
 
